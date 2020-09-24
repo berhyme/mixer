@@ -1,10 +1,9 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-4">
-      <% @cocktails.each do |cocktail| %>
-        <%= cocktail.name %>
-        <%= cocktail.birthplace %>
+<div class="card">
+      <% if locals[:cocktail].photo.key.nil? == false %>
+        <% background_url = image_path 'mixer.jpg' %>
+      <% else %>
+        <% background_url = image_path 'mixer.jpg' %>
       <% end %>
-    </div>
-  </div>
+      <%= locals[:cocktail].name %>
+      <%= locals[:cocktail].birthplace %>
 </div>
