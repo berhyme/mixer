@@ -1,0 +1,18 @@
+<div class="banner">
+  <div class="container">
+    <h1>Mixer</h1>
+    <p>Life is short. Mix it up.</p>
+    <%= link_to "Add a unique cocktail", new_cocktail_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4">
+      <% @cocktails.each do |cocktail| %>
+        <%= cocktail.name %>
+        <%= cocktail.birthplace %>
+      <% end %>
+    </div>
+  </div>
+</div>
