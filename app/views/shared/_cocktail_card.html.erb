@@ -1,9 +1,12 @@
 <div class="card">
-      <% if locals[:cocktail].photo.key.nil? == false %>
-        <% background_url = image_path 'mixer.jpg' %>
-      <% else %>
-        <% background_url = image_path 'mixer.jpg' %>
-      <% end %>
-      <%= locals[:cocktail].name %>
-      <%= locals[:cocktail].birthplace %>
+  <% if locals[:cocktail].photo.key.nil? == false %>
+  <%= image_tag 'mixer.jpg' %>
+  <% else %>
+  <%= background_url = image_path 'mixer.jpg' %>
+  <% end %>
+  <div class="card-infos">
+    <h2><%= locals[:cocktail].name %></h2>
+    <!-- <p><%= locals[:cocktail].birthplace %></p> -->
+    <span class="flag-icon-us">aaa</span>
+  </div>
 </div>
