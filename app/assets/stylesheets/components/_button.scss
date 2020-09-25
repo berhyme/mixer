@@ -1,7 +1,7 @@
 .btn-main {
   color: #4A4A4A;
   border: 1.5px solid #4A4A4A;
-  padding: 8px 24px;
+  padding: 8px 40px;
   border-radius: 50px;
   font-weight: bold;
   opacity: 1;
@@ -11,4 +11,15 @@
 .btn-main:hover {
   background-color: #B57D6B;
   opacity: 0.5;
+}
+
+.btn-search {
+  color: #4A4A4A;
+  border: 1.5px solid #4A4A4A;
+  padding: 5px 16px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
 }

@@ -4,22 +4,30 @@
   height: 100vh;
   color: #eee;
   text-align: center;
-  padding-top: 40vh;
+  padding-top: 25vh;
 
   h1 {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
   font-family: $banner-font;
-  font-size: 96px;
+  font-size: 112px;
   font-weight: bold;
   }
 
   h2 {
   font-family: $banner-font-two;
-  font-size: 30px;
+  font-size: 48px;
   color: white;
-  opacity: .8;
+  opacity: .9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  }
+
+  h3 {
+  font-family: $banner-font-two;
+  font-size: 40px;
+  color: white;
+  opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
   }
 
