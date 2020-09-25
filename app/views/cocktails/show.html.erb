@@ -1,13 +1,14 @@
 <div class="container" style="padding-top: 100px;">
   <div class="card">
-    <% if @cocktail.photo.key.nil? == false %>
-    <%= image_tag 'mixer.jpg' %>
+    <% if @cocktail.photo.attached? == false %>
+    <%= image_tag 'sample.png' %>
     <%= @cocktail.name %>
-    <%= @cocktail.birthplace %>
+    <%= @cocktail.country %>
     <% else %>
-    <%= image_tag 'mixer.jpg' %>
+    <%= image_tag 'sample.png' %>
     <%= @cocktail.name %>
-    <%= @cocktail.birthplace %>
+    <%= @cocktail.country %>
     <% end %>
   </div>
 </div>
+    <!-- if @cocktail.photo.key.nil? == false -->

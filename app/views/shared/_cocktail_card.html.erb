@@ -1,12 +1,13 @@
 <div class="card">
-  <% if locals[:cocktail].photo.key.nil? == false %>
-  <%= image_tag 'mixer.jpg' %>
+  <% if locals[:cocktail].photo.attached? == false %>
+  <%= image_tag 'sample.png' %>
   <% else %>
-  <%= background_url = image_path 'mixer.jpg' %>
+  <%= image_tag 'sample.png' %>
   <% end %>
   <div class="card-infos">
-    <h2><%= locals[:cocktail].name %></h2>
-    <!-- <p><%= locals[:cocktail].birthplace %></p> -->
-    <span class="flag-icon-us">aaa</span>
+    <%# locals[:cocktail].name %>
+    <h2><%= link_to "#{locals[:cocktail].name}", cocktail_path(locals[:cocktail]) %></h2>
+    <!-- <p><%= locals[:cocktail].country %></p> -->
+    <span class="flag-icon flag-icon-kr"></span>
   </div>
 </div>

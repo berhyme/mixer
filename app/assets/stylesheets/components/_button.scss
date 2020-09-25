@@ -1,0 +1,14 @@
+.btn-main {
+  color: #4A4A4A;
+  border: 1.5px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.btn-main:hover {
+  background-color: #B57D6B;
+  opacity: 0.5;
+}

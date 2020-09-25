@@ -1,6 +1,7 @@
 <%= simple_form_for @cocktail do |f| %>
 <%= f.input :name %>
-<%= f.input :birthplace %>
+<%= f.input :country, as: :select, collection: ActionView::Helpers::FormOptionsHelper::COUNTRIES, input_html: { class: 'select2' } %>
+<!-- route -->
 <%= f.input :photo, as: :file %>
 <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
