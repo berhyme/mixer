@@ -1,9 +1,9 @@
-<div class="container">
- <div class="row" style="padding-top: 100px;">
+<div class="container" style="padding-top: 100px;">
+ <!-- <div class="row" style="padding-top: 100px;"> -->
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
     <%= render "shared/cocktail_card", locals: { cocktail: cocktail } %>
     <% end %>
   </div>
 </div>
-</div>
+<!-- </div> -->
