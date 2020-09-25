@@ -9,7 +9,7 @@
       <div class="col"></div>
       <div class="col">
         <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-        <%= f.input :name, input_html: { :style => 'width: 150px' }, placeholder: 'Type cocktail name'%>
+        <%= f.input :name, input_html: { :style => 'width: 150px', :value => "" }, placeholder: 'Type cocktail name'%>
         <%= f.submit "Search", class: "btn-search" %>
         <% end %>
       </div>
