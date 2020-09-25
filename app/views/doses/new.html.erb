@@ -1,6 +1,6 @@
 <h3>Add a new dose to your cocktail</h3>
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
-  <%= f.input :description %>
+  <%= f.input :description, placeholder: "ex) 800ml, 400g, 1tsp, handful" %>
   <%= f.button :submit, class: "btn-search" %>
 <% end %>

@@ -8,8 +8,10 @@
     <div class="card-infos">
       <h2><%= @cocktail.name %></h2>
       <div>
-        <span class="flag-icon flag-icon-kr" style="align-items: center;"></span>
+        <% code = @cocktail.country.downcase %>
+        <span class= "flag-icon flag-icon-<%= code %>"></span<% code %>" style="align-items: center;"></span>
         <h2><%= @cocktail.country %></h2>
+        <%# raise %>
       </div>
     </div>
   </div>
@@ -32,7 +34,6 @@
           <% end %>
         </td>
       </tr>
-      <%# raise  %>
       <% end %>
     </tbody>
   </table>
