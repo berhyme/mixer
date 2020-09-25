@@ -5,6 +5,6 @@ require("channels")
 
 
 import 'bootstrap';
-import { initSelect2 } from 'init_select2';
+// import { initSelect2 } from 'init_select2';
 
-initSelect2();
+// initSelect2();
