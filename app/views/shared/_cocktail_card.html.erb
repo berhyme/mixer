@@ -1,5 +1,6 @@
-  <% if locals[:cocktail].photo.attached? == false %>
-  <% background_url = image_path 'sample.png' %>
+  <% if locals[:cocktail].photo.attached? %>
+  <% background_url = cl_image_path locals[:cocktail].photo.key %>
+  <%# raise %>
   <% else %>
   <% background_url = image_path 'sample.png' %>
   <% end %>

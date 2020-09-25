@@ -1,6 +1,6 @@
 <div class="container justify-content-center" style="padding-top: 100px;">
-  <% if @cocktail.photo.attached? == false %>
-  <% background_url = image_path 'sample.png' %>
+  <% if @cocktail.photo.attached? %>
+  <% background_url = cl_image_path @cocktail.photo.key %>
   <% else %>
   <% background_url = image_path 'sample.png' %>
   <% end %>
