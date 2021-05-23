@@ -6,7 +6,9 @@
   <% end %>
   <div class="card" style="background-image: url('<%= background_url %>'); background-size: cover;">
     <div class="card-infos">
-      <h2><%= link_to "#{locals[:cocktail].name}", cocktail_path(locals[:cocktail]) %></h2>
+      <h2>
+        <a onclick="showCocktailModal(<%= locals[:cocktail].id %>)" id="cocktail-card-<%= locals[:cocktail].id %>"><%= locals[:cocktail].name %></a>
+      </h2>
       <!-- <span class="flag-icon flag-icon-kr"></span> -->
     </div>
   </div>
