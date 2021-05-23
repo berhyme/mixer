@@ -1,14 +1,22 @@
 // alert('check')
 
-function showCocktailModal(id) {
+async function showCocktailModal(id) {
   console.log(id)
   // 1. per cocktail id, receive data from server
-  const data = {
-    name: 'Test',
-    photo: 'photo',
-    doses: 'doses',
-    ingredients: 'ingredients',
-  }
+  // 여기로 백엔드 api 호출해서 가져오기
+  const url = `http://localhost:3000/api/cocktail/${id}`
+  const res = await fetch(url)
+  const data = await res.json()
+  // const data = {
+  //   name: 'Test',
+  //   photo: 'photo',
+  //   doses: 'doses',
+  //   ingredients: 'ingredients',
+  // }
+  fetch(url)
+    .then(res => res.json())
+    .then(console.log)
+
   // 2. with the data, create modal and bind
   const modalDiv = document.createElement('div')
   modalDiv.style.width = '100vw'
@@ -25,12 +33,15 @@ function showCocktailModal(id) {
 
   modalDiv.innerHTML = `
     <div style="width: 400px; height: 300px; background-color: white;">
-      <div style="">x</div>
+      <div class="w-100 p-2 d-flex justify-content-end">
+        <button class="close-btn border-0 px-2">x</button>
+      </div>
       ${JSON.stringify(data)}
     </div>
   `
 
-  modalDiv.addEventListener('click', function () {
+  const closeBtn = modalDiv.getElementsByClassName('close-btn')[0]
+  closeBtn.addEventListener('click', function () {
     document.body.removeChild(modalDiv);
   })
 
