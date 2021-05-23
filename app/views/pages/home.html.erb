@@ -7,15 +7,12 @@
       <h2>Life is short. Mix it up.</h2>
       <p>Here are all cocktails from around the world. Tell us about yours too.</p>
     </div>
-    <div class="d-flex col-md-4 col-md-offset-" style="padding-top: 30px; max-width: none;">
-      <div class="col"></div>
-      <div class="col">
+    <div class="d-flex justify-content-center align-items-center m-t-4">
+      <!-- 위의 세개가 센터링하는 핵심 -->
         <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-        <%= f.input :name, input_html: { :style => 'width: 150px', :value => "" }, placeholder: 'Type cocktail name'%>
+        <%= f.input :name, label_html: { class: 'd-none' }, wrapper_html: { :style => 'margin-bottom: 0px;' }, input_html: { :style => 'width: 300px; text-align: center;', :value => "" }, placeholder: 'Type cocktail name'%>
         <%= f.submit "Search", class: "btn-search" %>
         <% end %>
-      </div>
-      <div class="col"></div>
     </div>
     <div>
       <h3 style="padding: 15px 0px 15px;">OR...</h3>

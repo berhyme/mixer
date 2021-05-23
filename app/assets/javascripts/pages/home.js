@@ -5,9 +5,9 @@ function showCocktailModal(id) {
   // 1. per cocktail id, receive data from server
   const data = {
     name: 'Test',
-    photo: '',
-    doses: '',
-    ingredients: '',
+    photo: 'photo',
+    doses: 'doses',
+    ingredients: 'ingredients',
   }
   // 2. with the data, create modal and bind
   const modalDiv = document.createElement('div')
@@ -25,7 +25,8 @@ function showCocktailModal(id) {
 
   modalDiv.innerHTML = `
     <div style="width: 400px; height: 300px; background-color: white;">
-      This is modal area.
+      <div style="">x</div>
+      ${JSON.stringify(data)}
     </div>
   `
 
